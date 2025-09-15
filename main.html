@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Martín del Campo Valdés</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            font-size: 11pt;
+        }
+        
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            display: flex;
+            min-height: 297mm;
+        }
+        
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 25px;
+        }
+        
+        .main-content {
+            width: 65%;
+            padding: 30px;
+            background: white;
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #3498db;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #bdc3c7;
+            font-weight: 300;
+        }
+        
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 10px;
+            font-size: 10pt;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info .icon {
+            width: 20px;
+            margin-right: 10px;
+            text-align: center;
+            color: #3498db;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skills-list li {
+            margin-bottom: 8px;
+            font-size: 10pt;
+        }
+        
+        .skill-bar {
+            background: #34495e;
+            height: 4px;
+            border-radius: 2px;
+            margin-top: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .main-section {
+            margin-bottom: 25px;
+        }
+        
+        .main-section h2 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .profile-text {
+            text-align: justify;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            border-left: 3px solid #3498db;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+        
+        .job-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .company {
+            font-size: 12px;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .duration {
+            font-size: 10pt;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .job-description {
+            font-size: 10pt;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .job-description ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        .job-description li {
+            margin-bottom: 3px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .tech-item {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+            font-size: 10pt;
+        }
+        
+        .tech-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .tech-level {
+            font-size: 9pt;
+            color: #7f8c8d;
+        }
+        
+        .languages {
+            margin-top: 10px;
+        }
+        
+        .language-item {
+            margin-bottom: 8px;
+        }
+        
+        .language-name {
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        
+        .language-level {
+            font-size: 9pt;
+            color: #7f8c8d;
+        }
+        
+        @media print {
+            body { margin: 0; }
+            .container { box-shadow: none; margin: 0; max-width: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-photo">MV</div>
+                <div class="name">Martín del Campo<br>Valdés</div>
+                <div class="title">Full-Stack Developer</div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>CONTACTO</h3>
+                <ul class="contact-info">
+                    <li><span class="icon">📱</span> (044) 33 12 76 12 49</li>
+                    <li><span class="icon">✉️</span> mcvjf.maz@gmail.com</li>
+                    <li><span class="icon">📍</span> Mazatlán, Sinaloa</li>
+                    <li><span class="icon">🎂</span> 24 de enero, 1989</li>
+                    <li><span class="icon">🏠</span> Casado</li>
+                    <li><span class="icon">🇲🇽</span> Mexicano</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>HABILIDADES CLAVE</h3>
+                <ul class="skills-list">
+                    <li>
+                        PHP & Laravel
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                    </li>
+                    <li>
+                        JavaScript
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </li>
+                    <li>
+                        MySQL
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </li>
+                    <li>
+                        Bootstrap/CSS
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </li>
+                    <li>
+                        Git/GitHub
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </li>
+                    <li>
+                        Docker
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>IDIOMAS</h3>
+                <div class="languages">
+                    <div class="language-item">
+                        <div class="language-name">Español</div>
+                        <div class="language-level">Nativo</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Inglés</div>
+                        <div class="language-level">Intermedio-Avanzado (70%)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>EDUCACIÓN</h3>
+                <div style="font-size: 10pt;">
+                    <div style="font-weight: 600; color: #3498db;">TSU en TIC</div>
+                    <div style="font-size: 9pt; color: #bdc3c7;">Área Sistemas Informáticos</div>
+                    <div style="font-size: 9pt; color: #bdc3c7;">Cédula: 9028980</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-section">
+                <h2>PERFIL PROFESIONAL</h2>
+                <p class="profile-text">
+                    Desarrollador Full-Stack con más de <strong>10 años de experiencia</strong> especializado en PHP y tecnologías web modernas. Experto en <strong>Laravel</strong> con sólidos conocimientos en desarrollo frontend y backend. Comprometido con las <strong>buenas prácticas de programación</strong>, control de versiones y desarrollo de software de calidad. Experiencia comprobada en trabajo colaborativo y adaptación a nuevas tecnologías.
+                </p>
+            </div>
+            
+            <div class="main-section">
+                <h2>EXPERIENCIA PROFESIONAL</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Programador PHP Full-Stack</div>
+                    <div class="company">Desarrollo Nubit</div>
+                    <div class="duration">Octubre 2019 - Actualidad (6+ años)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Desarrollo de aplicaciones web a la medida utilizando <strong>PHP y Laravel</strong></li>
+                            <li>Implementación de soluciones Full-Stack con <strong>FastAPI y Docker</strong></li>
+                            <li>Colaboración en proyectos utilizando <strong>Git/GitHub</strong> para control de versiones</li>
+                            <li>Aplicación de <strong>buenas prácticas de programación</strong> y patrones de diseño</li>
+                            <li>Trabajo en entornos <strong>Ubuntu 20.04</strong> y contenedorización con Docker</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Programador PHP Frontend/Backend</div>
+                    <div class="company">STX</div>
+                    <div class="duration">Octubre 2014 - Octubre 2019 (5 años)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Desarrollo de aplicaciones web personalizadas con <strong>PHP</strong></li>
+                            <li>Implementación de interfaces responsivas con <strong>Bootstrap y jQuery</strong></li>
+                            <li>Desarrollo de <strong>APIs REST</strong> y servicios web</li>
+                            <li>Trabajo en equipo utilizando metodologías ágiles</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-title">Programador ASP</div>
+                    <div class="company">Tracsa SAPI</div>
+                    <div class="duration">Junio 2013 - Febrero 2014 (8 meses)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Mantenimiento y actualización de herramientas de <strong>intranet corporativa</strong></li>
+                            <li>Desarrollo y optimización de aplicaciones web internas</li>
+                            <li>Soporte técnico a usuarios finales</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <h2>TECNOLOGÍAS Y HERRAMIENTAS</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-name">PHP</div>
+                        <div class="tech-level">10+ años • Avanzado</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Laravel</div>
+                        <div class="tech-level">5+ años • Avanzado</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">JavaScript</div>
+                        <div class="tech-level">8+ años • Avanzado</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">MySQL</div>
+                        <div class="tech-level">10+ años • Avanzado</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">FastAPI</div>
+                        <div class="tech-level">1+ año • Intermedio</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Docker</div>
+                        <div class="tech-level">1+ año • Intermedio</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Bootstrap</div>
+                        <div class="tech-level">8+ años • Avanzado</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Angular</div>
+                        <div class="tech-level">2+ años • Intermedio</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Ubuntu 20.04</div>
+                        <div class="tech-level">Intermedio</div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-name">Git/GitHub</div>
+                        <div class="tech-level">Avanzado</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-section">
+                <h2>COMPETENCIAS PROFESIONALES</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; font-size: 10pt;">
+                    <div>
+                        <strong>✓ Buenas prácticas de programación</strong><br>
+                        <span style="color: #7f8c8d;">Código limpio y documentado</span>
+                    </div>
+                    <div>
+                        <strong>✓ Trabajo colaborativo</strong><br>
+                        <span style="color: #7f8c8d;">Git, metodologías ágiles</span>
+                    </div>
+                    <div>
+                        <strong>✓ Adaptabilidad tecnológica</strong><br>
+                        <span style="color: #7f8c8d;">Rápido aprendizaje</span>
+                    </div>
+                    <div>
+                        <strong>✓ Investigación autónoma</strong><br>
+                        <span style="color: #7f8c8d;">Resolución independiente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
